@@ -1,6 +1,7 @@
 function() {
 	var t;
 	t = function(t) {
+
 		var e = void 0 === t ? {} : t;
 		e = Object.assign({}, {
 			interval: 5e3,

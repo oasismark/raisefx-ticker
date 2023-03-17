@@ -61,7 +61,6 @@
 		}, e);
 		var c, n, l, a = document.querySelector(e.selector);
 		a ? (n = document.createElement("table"), l = document.createElement("thead"), c = document.createElement("tbody"), n.border = 0, n.style = e.tableStyle, n.className = "contentTable", n.innerText = styles, l.style = e.theadStyle, c.style = e.tbodyStyle, l.innerHTML = '<tr>\n            <td align="center"></td>\n            <td align="center">'.concat(e.symbol, '</td>\n            <td align="center">').concat(e.bid, '</td>\n            <td align="center">').concat(e.ask, "</td>\n            ").concat(e.showSpread ? '<td align="center">'.concat(e.spread, "</td>") : "", "\n        </tr>"), n.appendChild(l), n.appendChild(c), a.appendChild(n), i(), setInterval(i, e.interval)) : console.error("Target DOM node does not exist", e.selector);
-		document.head.appendChild(n)
 
 		function i() {
 			fetch(e.url).then((function(t) {
